@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bacround2"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="𝔽oydali"
+            android:layout_marginLeft="27dp"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:textColor="@color/black"></TextView>
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="𝐰𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 !"
+            android:layout_marginLeft="25dp"></TextView>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:id="@+id/recyclerview"></androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+
+
+</LinearLayout>
