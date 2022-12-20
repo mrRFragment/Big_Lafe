@@ -15,6 +15,8 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -25,6 +27,8 @@ public class MainActivity2 extends AppCompatActivity {
 BottomNavigationView bottomNavigationView;
 FloatingActionButton fab;
 ImageView imageView;
+WebView webView;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +36,12 @@ ImageView imageView;
         bottomNavigationView=findViewById(R.id.bottomNavigationView);
         fab=findViewById(R.id.fab);
         imageView=findViewById(R.id.image);
+        webView=findViewById(R.id.web_view);
+
+        WebSettings webSettings=webView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        String file="file:android_asset/andriod.gif";
+        webView.loadUrl(file);
 
         if (ContextCompat.checkSelfPermission(MainActivity2.this,
                 Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
